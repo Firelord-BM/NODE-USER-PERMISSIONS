@@ -11,7 +11,7 @@ function setProject(req,res,next){
     req.project = projects.find(p=> p.id === projectId)
     
     if(!req.project){
-        return res.status(404).send("The Project with the given ID was not found.")
+        return res.status(404).send("Project not found.")
     }
     next();
 }
